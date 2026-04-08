@@ -9,7 +9,11 @@ class Person:
 
 
 def create_person_list(people: list) -> list:
-    list_people = [Person(name=person_data["name"], age=person_data["age"]) for person_data in people]
+    list_people = [
+        Person(
+            name=person_data["name"], age=person_data["age"]
+        ) for person_data in people
+    ]
     for person_data in people:
         person = Person.people[person_data["name"]]
         if person_data.get("wife"):
